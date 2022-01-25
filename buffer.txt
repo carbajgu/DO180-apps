@@ -1,0 +1,2 @@
+CONTAINER ID  IMAGE                                   COMMAND    CREATED         STATUS             PORTS  NAMES
+fde4d242d2fd  registry.access.redhat.com/ubi8:latest  /bin/bash  17 minutes ago  Up 17 minutes ago         asuser
