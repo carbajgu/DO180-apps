@@ -1,2 +1,31 @@
-CONTAINER ID  IMAGE                                   COMMAND    CREATED         STATUS             PORTS  NAMES
-fde4d242d2fd  registry.access.redhat.com/ubi8:latest  /bin/bash  17 minutes ago  Up 17 minutes ago         asuser
+[student@workstation solutions]$ podman images
+REPOSITORY                            TAG      IMAGE ID       CREATED        SIZE
+localhost/do180/custom-apache         latest   110a24c4ee79   20 hours ago   234 MB
+registry.access.redhat.com/ubi8       latest   fca12da1dc30   6 weeks ago    235 MB
+registry.access.redhat.com/ubi8/ubi   8.3      613e5da7a934   9 months ago   213 MB
+quay.io/redhattraining/httpd-parent   latest   4346d3cace25   2 years ago    236 MB
+localhost/guille/httpd                69.0     4346d3cace25   2 years ago    236 MB
+[student@workstation solutions]$ podman rmi quay.io/redhattraining/httpd-parent
+Untagged: quay.io/redhattraining/httpd-parent:latest
+[student@workstation solutions]$ podman images
+REPOSITORY                            TAG      IMAGE ID       CREATED        SIZE
+localhost/do180/custom-apache         latest   110a24c4ee79   20 hours ago   234 MB
+registry.access.redhat.com/ubi8       latest   fca12da1dc30   6 weeks ago    235 MB
+registry.access.redhat.com/ubi8/ubi   8.3      613e5da7a934   9 months ago   213 MB
+localhost/guille/httpd                69.0     4346d3cace25   2 years ago    236 MB
+[student@workstation solutions]$ podman rmi localhost/do180/custom-apache
+9c84b1c33e4ba1383c7b37c9ee6ccdf130d4f68e8ff6d2cc3d4100be45de1f2c
+1a733604b285092c178b5743ab50877a734f363b07f74328b4956e21a908c411
+c1c435b2ba92b2ba68ecd6449ffd7c34e3d040e182b347dff87a82319f50f296
+2c51e982531568321ac22b8dab6064dc777bff70483311619982184d1e4f6121
+26da2538057196964dc96542307f13a5d77d80f9644b922787422dcbaa4b0b55
+Untagged: localhost/do180/custom-apache:latest
+Deleted: 110a24c4ee79ab792fb88d14c8ce62bf8c03dc0f3d74336d265a4761657bbfd5
+[student@workstation solutions]$ podman images
+REPOSITORY                            TAG      IMAGE ID       CREATED        SIZE
+<none>                                <none>   f18a4fefa0c0   20 hours ago   213 MB
+registry.access.redhat.com/ubi8       latest   fca12da1dc30   6 weeks ago    235 MB
+registry.access.redhat.com/ubi8/ubi   8.3      613e5da7a934   9 months ago   213 MB
+localhost/guille/httpd                69.0     4346d3cace25   2 years ago    236 MB
+[student@workstation solutions]$ 
+
